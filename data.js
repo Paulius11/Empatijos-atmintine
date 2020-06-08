@@ -23,7 +23,7 @@ export const NEEDS_UNMET = [
         { needs:"unmet", title: 'Gėda', elements: ['Drovus', 'Susigėdęs' ]  },
         { needs:"unmet", title: 'Pyktis', elements: ['Sutrikęs', 'Įsiutęs', 'Kerštingas', 'Įniršęs', 'Pasipiktinęs', 'Pagiežingas' ]  },
         { needs:"unmet", title: 'Neapykanta', elements: ['Priešiškas', 'Pasibjaurėjęs', 'Jaučiantis antipatiją', 'Jaučiantis neapykantą', 'Jaučiantis panieką' ]  },
-        { needs:"unmet", title: 'Nuobodylys', elements: ['Nuobodžiaujantis', 'Apatiškas', 'Sustingęs', 'Abejingas', 'Nutolęs', 'Užsivėręs', 'Atsiskyręs' ]  },
+        { needs:"unmet", title: 'Nuobodulys', elements: ['Nuobodžiaujantis', 'Apatiškas', 'Sustingęs', 'Abejingas', 'Nutolęs', 'Užsivėręs', 'Atsiskyręs' ]  },
       ];
 
 

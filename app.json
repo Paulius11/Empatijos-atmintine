@@ -2,11 +2,7 @@
   "expo": {
     "name": "Empatijos atmintinė",
     "slug": "nvc-atmintine",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
+    "platforms": ["android"],
     "version": "1.0.3",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -18,15 +14,11 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true
-    },
+    "assetBundlePatterns": ["**/*"],
     "android": {
       "package": "nvc.atmintine",
-      "versionCode": 3
+      "versionCode": 3,
+      "permissions": []
     }
   }
 }

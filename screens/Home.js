@@ -1,30 +1,38 @@
-import React from "react";
+import React, {useState} from "react";
 import { globalStyles } from "./styles";
-import { View, Button} from "react-native";
+import { View, Button, TouchableOpacity } from "react-native";
 import Quate from "../shared/Quote";
 
 export default function Home({ navigation }) {
+
   const pressHandler = (page) => {
     navigation.push(page);
   };
-  const color = "#6099c5"
+
+  const COLOR = "#6099c5";
+
+
+
+
+
+
 
   return (
     <View style={globalStyles.container}>
-      <Quate />
+   
+       <Quate/>
 
-
-      <View style={globalStyles.button} >
+      <View style={globalStyles.button}>
         <Button
           title="Poreikiai"
-          color={color}
+          color={COLOR}
           onPress={() => pressHandler("PoreikiaiPN")}
         />
       </View>
       <View style={globalStyles.button}>
         <Button
           title="NVC modelis"
-          color={color}
+          color={COLOR}
           onPress={() => pressHandler("Modelis")}
         />
       </View>
@@ -32,7 +40,7 @@ export default function Home({ navigation }) {
       <View style={globalStyles.button}>
         <Button
           title="Bendražmogiski Poreikiai"
-          color={color}
+          color={COLOR}
           onPress={() => pressHandler("BendriPoreikiai")}
         />
       </View>

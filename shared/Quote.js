@@ -1,5 +1,6 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { StyleSheet, Text, View } from 'react-native'
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
 // Basic assumptions
@@ -28,14 +29,19 @@ const basicAssumptions = [
 
 
 const Quote = () => {
+    const [randQuate, setRandQuate] = useState(getSubElement(basicAssumptions))
+
+
 
     return (
+      <TouchableOpacity onPress={() => setRandQuate(getSubElement(basicAssumptions))}>
         <View style={styles.card}>
         <View style={styles.cardContent}>
-          <Text style={styles.quote}>{getSubElement(basicAssumptions)}</Text>
-          <Text style={styles.author}>- NVC prielaidos</Text>
+            <Text style={styles.quote}>{randQuate}</Text>
+            <Text style={styles.author}>- NVC prielaidos</Text>
         </View>
       </View>
+      </TouchableOpacity>
     )
 }
 

@@ -65,9 +65,9 @@ const styles = StyleSheet.create({
   },
   titleSubSub: {
     fontSize: 17,
+    borderBottomColor: 'black',
+    borderBottomWidth: 0.3,
     marginBottom: 4,
-    borderColor: 'black',
-    borderStyle: 'dashed',
     borderLeftWidth: 0,
     borderRightWidth: 0,
     borderTopWidth: 0,

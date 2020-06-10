@@ -4,7 +4,6 @@ import {
   Text,
   StyleSheet,
   Modal,
-  Button,
   TouchableOpacity,
 } from "react-native";
 import {
@@ -47,7 +46,8 @@ export default function Modelis() {
 
   return (
     <View style={globalStyles.container}>
-      <Modal visible={modalOpen} animationType="slide">
+      
+      <Modal visible={modalOpen} animationType="fade">
         <View style={globalStyles.container}>
           <MaterialIcons
             name="close"
@@ -127,12 +127,27 @@ const styles = StyleSheet.create({
   },
   modalClose: {
     marginTop: 20,
-    marginBottom: 5,
+    marginBottom: 15,
+    backgroundColor: "white",
+    borderRadius: 20,
+    padding: 5,
+    elevation: 2
   },
   modalText: {
     fontSize: 17,
     textAlign: "justify",
-    alignSelf: "stretch",
     lineHeight: 25,
+    backgroundColor: "white",
+    borderRadius: 20,
+    padding: 35,
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5
   },
 });

@@ -20,6 +20,7 @@ export const globalStyles = StyleSheet.create({
   },
   button: {
     marginBottom: 20,
+    borderRadius: 25,
     
   },
   card: {
@@ -37,4 +38,17 @@ export const globalStyles = StyleSheet.create({
     marginHorizontal: 18,
     marginVertical: 10,
   },
+  separatorBottom: {
+    borderBottomColor: 'black',
+    borderBottomWidth: 0.2,
+  },
+  titleSubSub: {
+    fontSize: 17,
+    marginBottom: 4,
+    borderLeftWidth: 0,
+    borderRightWidth: 0,
+    borderTopWidth: 0,
+    fontFamily: 'nunito-regular'
+  },
+
 });

@@ -76,7 +76,7 @@ export default function Modelis() {
         onPress={() => {
           setModalOpen(true);
           setModalText(
-            "Atsakas/reakciją į tai, kas įvyko, kurią pavadinkime judančia energija emociniame kūne "
+            "Atsakas/reakciją į tai, kas įvyko, kurią pavadinkime judančia energija emociniame kūne."
           );
         }}
       >

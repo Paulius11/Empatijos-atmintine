@@ -53,16 +53,18 @@ const renderItem = (item) => (
       </View>
     </CollapseHeader>
     <CollapseBody  >
-      <View style={globalStyles.cardContent} >
           {item.elements.map((el) => elementItem(el) )}
         
-        </View>
     </CollapseBody>
   </Collapse>
 );
 
 const elementItem = (item) => {
-  return <Text style={styles.titleSubSub} key={item}>{item}</Text>;
+  return (
+  <View style={globalStyles.cardContent}   key={item}>
+  <Text style={{...globalStyles.titleSubSub, ...globalStyles.separatorBottom}} key={item}>{item}</Text>
+  </View>
+  )
 };
 
 const styles = StyleSheet.create({
@@ -71,16 +73,7 @@ const styles = StyleSheet.create({
         fontFamily: 'nunito-regular',
 
   },
-  titleSubSub: {
-    fontSize: 17,
-    marginBottom: 4,
-    borderColor: 'black',
-    borderStyle: 'dashed',
-    borderLeftWidth: 0,
-    borderRightWidth: 0,
-    borderTopWidth: 0,
-    fontFamily: 'nunito-regular'
-  },
+
 
   cardNeedsMet: {
     borderRadius: 3,

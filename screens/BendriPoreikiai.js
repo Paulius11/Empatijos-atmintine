@@ -24,7 +24,7 @@ const NEEDS = [
   const elementItem = (item) => {
     return (
       <View style={globalStyles.cardContent}   key={item}>
-        <Text style={styles.titleSubSub} >{item}</Text>
+        <Text style={{...globalStyles.titleSubSub, ...globalStyles.separatorBottom}} >{item}</Text>
       </View>
 
     )
@@ -63,15 +63,6 @@ const styles = StyleSheet.create({
         fontFamily: 'nunito-regular',
 
   },
-  titleSubSub: {
-    fontSize: 17,
-    borderBottomColor: 'black',
-    borderBottomWidth: 0.3,
-    marginBottom: 4,
-    borderLeftWidth: 0,
-    borderRightWidth: 0,
-    borderTopWidth: 0,
-    fontFamily: 'nunito-regular'
-  },
+
 });
 

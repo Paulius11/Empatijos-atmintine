@@ -1,3 +1,5 @@
+// Pagal Ievos lapus
+
 export const NEEDS_MET = [
         { needs:"met", title: 'Ramybė', elements: ['Ramus', 'Romus', 'Atsipalaidavęs', 'Taikus', 'Tylus', 'Laisvas', 'Patenkintas', 'Susitelkęs', 'Komfortiškai besijaučiantis', 'Įsižeminęs', 'Stabilus', 'Pasitikintis', 'Išpildęs save', 'Švelnus', 'Jaučiantis palengvėjimą' ]  },
         { needs:"met", title: 'Laimė', elements: ['Džiaugsmingas', 'Pakylėtas', 'Judrus', 'Laimingas', 'Linksmas', 'Susižavėjęs', 'Džiugus', 'Palaimingas']  },
@@ -24,6 +26,23 @@ export const NEEDS_UNMET = [
         { needs:"unmet", title: 'Pyktis', elements: ['Sutrikęs', 'Įsiutęs', 'Kerštingas', 'Įniršęs', 'Pasipiktinęs', 'Pagiežingas' ]  },
         { needs:"unmet", title: 'Neapykanta', elements: ['Priešiškas', 'Pasibjaurėjęs', 'Jaučiantis antipatiją', 'Jaučiantis neapykantą', 'Jaučiantis panieką' ]  },
         { needs:"unmet", title: 'Nuobodulys', elements: ['Nuobodžiaujantis', 'Apatiškas', 'Sustingęs', 'Abejingas', 'Nutolęs', 'Užsivėręs', 'Atsiskyręs' ]  },
+      ];
+
+// Pagal Rolando http://empatijosbendruomene.lt/
+
+  export const NEEDS_MET_ROL = [
+        { needs:"meet", title: 'Mylintis', elements: ['Atjaučiantis', 'Gailestingas', 'Draugiškas', 'Meilus', 'Atviraširdis', 'Simpatizuojantis', 'Švelnus', 'Šiltas' ]  },
+        { needs:"meet", title: 'Palaima', elements: ['Ekstazė', 'Pakili nuotaika', 'Žvalus' ]  },
+        { needs:"meet", title: 'Džiaugsmas', elements: ['Linksmas', 'Malonumas', 'Džiugesys', 'Laimė' ]  },
+        { needs:"meet", title: 'Įsitraukęs', elements: ['Budrus', 'Smalsus', 'Pakerėtas', 'Transe', 'Sužavėtas', 'Susidomėjęs', 'Suintriguotas' ]  },
+        { needs:"meet", title: 'Atsigavęs', elements: ['Pagyvėjęs', 'Atjaunėjęs', 'Atsinaujinęs', 'Pailsėjęs', 'Atsigaivinęs' ]  },
+        { needs:"meet", title: 'Taikus', elements: ['Ramus', 'Aiškumas', 'Patogumas', 'Balansas', 'Patenkintas', 'Pasiruošęs', 'Atsipalaidavęs', 'Palengvėjimas', 'Giedras', 'Romus' ]  },
+        { needs:"meet", title: 'Įkvėptas', elements: ['Stebėtis', 'Nuostaba']  },
+        { needs:"meet", title: 'Viltingas', elements: ['Laukiantis', 'Padrąsintas', 'Optimistiškas']  },
+        { needs:"meet", title: 'Dėkingas', elements: ['Vertinantis', 'Pakylėtas', 'Palytėtas']  },
+        { needs:"meet", title: 'Sujaudintas', elements: ['Gyvas', 'Judrus', 'Užsidegęs', 'Sužadintas', 'Susižavėjęs', 'Nekantraujantis', 'Trokštantis', 'Energingas', 'Entuziastingas', 'Apsvaigęs', 'Gyvybingas', 'Aistringas', 'Kunkuliuojantis', 'Virpantis']  },
+        { needs:"meet", title: 'Pasitikintis', elements: ['Įgalintas', 'Judrus', 'Užsidegęs', 'Sužadintas', 'Susižavėjęs', 'Nekantraujantis', 'Trokštantis', 'Energingas', 'Entuziastingas', 'Apsvaigęs', 'Gyvybingas', 'Aistringas', 'Kunkuliuojantis', 'Virpantis']  },
+
       ];
 
 

@@ -1,26 +1,19 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { globalStyles } from "./styles";
 import { View, Button, TouchableOpacity } from "react-native";
 import Quate from "../shared/Quote";
 
 export default function Home({ navigation }) {
-
   const pressHandler = (page) => {
     navigation.push(page);
   };
 
   const COLOR = "#6099c5";
-
-
-
-
-
-
+  // const COLOR = "#23A6D9";
 
   return (
     <View style={globalStyles.container}>
-   
-       <Quate/>
+      <Quate />
 
       <View style={globalStyles.button}>
         <Button

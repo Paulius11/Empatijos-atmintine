@@ -3,7 +3,7 @@
     "name": "Empatijos atmintinė",
     "slug": "nvc-atmintine",
     "platforms": ["android"],
-    "version": "1.0.4",
+    "version": "1.0.5",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -17,7 +17,7 @@
     "assetBundlePatterns": ["**/*"],
     "android": {
       "package": "nvc.atmintine",
-      "versionCode": 4,
+      "versionCode": 5,
       "permissions": []
     }
   }

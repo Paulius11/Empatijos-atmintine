@@ -3,12 +3,12 @@ import { globalStyles } from "./styles";
 
 import { View, Text, StyleSheet } from "react-native";
 
-const About = () => {
+export default About = () => {
   return (
     <View style={globalStyles.container}>
-      <Text>About Screen</Text>
+      <Text>Ačiū: </Text>
+      <Text>http://empatijosbendruomene.lt</Text>
+      <Text>https://www.facebook.com/empatijosmagija</Text>
     </View>
   );
-};
-
-export default About;
+}

@@ -9,9 +9,9 @@ import Modelis from '../screens/Modelis'
 
 const Stack = createStackNavigator()
 
-export default function Navigator() {
+export default function HomeNavigator() {
   return (
-    <NavigationContainer>
+    <>
       <Stack.Navigator
       initialRouteName='Home'
        screenOptions={{
@@ -28,6 +28,6 @@ export default function Navigator() {
         <Stack.Screen name='BendriPoreikiai'  component={BendriPoreikiai} options={{ title: 'Bendražmogiški Poreikiai' }} />
         <Stack.Screen name='Modelis'  component={Modelis} />
       </Stack.Navigator>
-    </NavigationContainer>
+    </>
   );
 }

@@ -12,7 +12,7 @@ export default About = () => {
           <Text>Ačiū: </Text>
           <TouchableOpacity  style={{...globalStyles.card , ...styles.linkSpace}}
             onPress={() =>
-              Linking.openURL("https://www.facebook.com/empatijosmagija")
+              Linking.openURL("http://www.empatijosbendruomene.lt")
             }
           >
             <Text>Empatijosbendruomene.lt</Text>

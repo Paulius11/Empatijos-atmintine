@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 import {
   Collapse,
@@ -7,73 +7,117 @@ import {
 } from "accordion-collapse-react-native";
 import * as myConst from "../data";
 import { globalStyles } from "./styles";
-import { AntDesign } from '@expo/vector-icons'; 
+import { AntDesign } from "@expo/vector-icons";
+import AsyncStorage from "@react-native-community/async-storage";
+
 
 
 export default function PoreikiaiPN() {
+  const [sortBy, setSortBy] = useState();
+
+
+  const getData = async () => {
+    try {
+      const value = await AsyncStorage.getItem("@ordering");
+      if (value !== null) {
+        setSortBy(value);
+      } else {
+        setSortBy('empatijos-bendruomene'); //default value
+      }
+
+
+    } catch (e) {
+      console.log(e)
+    }
+  };
+
+
+
+  useEffect(() => {
+    getData();
+    console.log(sortBy)
+  }, [sortBy]);
+
+
   return (
     <View style={globalStyles.container}>
-    <ScrollView>
-      <View >
-        <View style={globalStyles.card}>
-          <Collapse>
-            <CollapseHeader>
-              <View style={globalStyles.cardContent, {alignItems: 'center', marginTop: 5}}>
-                <Text style={globalStyles.titleText}>Patenkinti poreikiai </Text>
-                <AntDesign name="down" size={24} color="black" />
-              </View>
-            </CollapseHeader>
-            <CollapseBody>{myConst.NEEDS_MET.map(renderItem)}</CollapseBody>
-          </Collapse>
-        </View>
+      <ScrollView>
+        <View>
+        {__DEV__ ? <Text>sorting by: {sortBy}</Text>: null}
+          <View style={globalStyles.card}>
+            <Collapse>
+              <CollapseHeader>
+                <View
+                  style={
+                    (globalStyles.cardContent,
+                    { alignItems: "center", marginTop: 1 })
+                  }
+                >
+                  <Text style={globalStyles.titleText}>
+                    Patenkinti poreikiai
+                  </Text>
+                  <AntDesign name="down" size={24} color="black" />
+                </View>
+              </CollapseHeader>
+              <CollapseBody>{sortBy === 'empatijos-bendruomene' ? myConst.NEEDS_MET_ROL.map(renderItem) : myConst.NEEDS_MET_IEVA.map(renderItem)}</CollapseBody>
+            </Collapse>
+          </View>
 
-        <View style={globalStyles.card}>
-          <Collapse>
-            <CollapseHeader>
-              <View style={globalStyles.cardContent, {alignItems: 'center', marginTop: 5}}>
-                <Text style={globalStyles.titleText}>Nepatenkinti poreikiai</Text>
-                <AntDesign name="down" size={24} color="black" />
-              </View>
-            </CollapseHeader>
-            <CollapseBody>{myConst.NEEDS_UNMET.map(renderItem)}</CollapseBody>
-          </Collapse>
+          <View style={globalStyles.card}>
+            <Collapse>
+              <CollapseHeader>
+                <View
+                  style={
+                    (globalStyles.cardContent,
+                    { alignItems: "center", marginTop: 5 })
+                  }
+                >
+                  <Text style={globalStyles.titleText}>
+                    Nepatenkinti poreikiai
+                  </Text>
+                  <AntDesign name="down" size={24} color="black" />
+                </View>
+              </CollapseHeader>
+              <CollapseBody>{sortBy === 'empatijos-bendruomene' ? myConst.NEEDS_UNMET_ROL.map(renderItem) : myConst.NEEDS_UNMET_IEVA.map(renderItem)}</CollapseBody>
+            </Collapse>
+          </View>
         </View>
-      </View>
       </ScrollView>
-      </View>
+    </View>
   );
-};
+}
 
 const renderItem = (item) => (
   <Collapse key={item.title}>
-
-    <CollapseHeader style={item.needs === "met"  ? styles.cardNeedsMet : styles.cardNeedsUnMet }  >
-      <View style={globalStyles.cardContent}  >
+    <CollapseHeader
+      style={item.needs === "met" ? styles.cardNeedsMet : styles.cardNeedsUnMet}
+    >
+      <View style={globalStyles.cardContent}>
         <Text style={styles.titleSub}>{item.title}</Text>
       </View>
     </CollapseHeader>
-    <CollapseBody  >
-          {item.elements.map((el) => elementItem(el) )}
-        
-    </CollapseBody>
+    <CollapseBody>{item.elements.map((el) => elementItem(el))}</CollapseBody>
   </Collapse>
 );
 
 const elementItem = (item) => {
   return (
-  <View style={globalStyles.cardContent}   key={item}>
-  <Text style={{...globalStyles.titleSubSub, ...globalStyles.separatorBottom}} key={item}>{item}</Text>
-  </View>
-  )
+    <View style={globalStyles.cardContent} key={item}>
+      <Text
+        style={{ ...globalStyles.titleSubSub, ...globalStyles.separatorBottom }}
+        key={item}
+      >
+        {item}
+      </Text>
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
   titleSub: {
     fontSize: 17,
-        fontFamily: 'nunito-regular',
-
+    fontFamily: "nunito-regular",
   },
-
 
   cardNeedsMet: {
     borderRadius: 3,

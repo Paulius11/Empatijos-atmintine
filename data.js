@@ -69,7 +69,7 @@ export const NEEDS_UNMET_ROL = [
         { needs:"unmet", title: 'Nuovargis', elements: ['Išsekęs', 'Išsieikvojęs', 'Mieguistas', 'Apatiškas', 'Išvargęs', 'Nusikamavęs']  },
         { needs:"unmet", title: 'Liūdnas', elements: ['Prislėgtas', 'Nusiminęs', 'Nusivylęs', 'Nedrąsus', 'Beviltiškas', 'Vienišas', 'Niūrus', 'Melancholija']  },
         { needs:"unmet", title: 'Ilgesys', elements: ['Pavydas', 'Pavyduliavimas', 'Troškimas', 'Nostalgija', 'Kamavimasis']  },
-        { needs:"unmet", title: 'SKAUSMAS', elements: ['Agonija', 'Sielvartas', 'Širdgėla', 'Gedėjimas', 'Susisielojęs','Sužeistas', 'Nelaimingas', 'Apgailestaujantis', 'atgailaujantis' ]  },
+        { needs:"unmet", title: 'Skausmas', elements: ['Agonija', 'Sielvartas', 'Širdgėla', 'Gedėjimas', 'Susisielojęs','Sužeistas', 'Nelaimingas', 'Apgailestaujantis', 'Atgailaujantis' ]  },
       ];
 
 

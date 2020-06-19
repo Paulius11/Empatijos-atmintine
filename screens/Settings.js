@@ -57,7 +57,7 @@ export default Settings = () => {
 
       <View style={{ ...globalStyles.card }}>
         <View style={{ ...globalStyles.cardContent }}>
-          <Text style={{ ...globalStyles.titleText }}>Rušiavimas pagal:</Text>
+          <Text style={{ ...globalStyles.titleText }}>Rūšiavimas pagal:</Text>
           <Picker
             style={{ width: 250 }}
             selectedValue={sortBy}

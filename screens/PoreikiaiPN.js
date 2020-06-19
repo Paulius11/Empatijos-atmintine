@@ -35,7 +35,10 @@ export default function PoreikiaiPN() {
 
   useEffect(() => {
     getData();
-    console.log(sortBy)
+    if(__DEV__){
+      console.log(sortBy)
+    }
+
   }, [sortBy]);
 
 

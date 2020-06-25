@@ -5,7 +5,7 @@ import {
   CollapseHeader,
   CollapseBody,
 } from "accordion-collapse-react-native";
-import * as myConst from "../data";
+import {NEEDS_MET_IEVA, NEEDS_UNMET_IEVA, NEEDS_MET_ROL, NEEDS_UNMET_ROL, NEEDS_MET_CNVC, NEEDS_UNMET_CNVC}  from "../data";
 import { globalStyles } from "./styles";
 import { AntDesign } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-community/async-storage";
@@ -31,6 +31,39 @@ export default function PoreikiaiPN() {
     }
   };
 
+  const displayDataMet = (sortBy) => {
+    let NEEDS_COMMON = null
+    if (sortBy === 'empatijos-bendruomene') {
+      NEEDS_COMMON = NEEDS_MET_ROL
+    }
+    else if (sortBy === 'empatijos-magija') {
+      NEEDS_COMMON = NEEDS_MET_IEVA
+    }
+    else if  (sortBy === 'cnvc') {
+      NEEDS_COMMON = NEEDS_MET_CNVC
+    }
+    else { //default value
+      NEEDS_COMMON = NEEDS_MET_ROL
+    }
+    return NEEDS_COMMON.map(renderItem)
+} 
+
+const displayDataNotMet = (sortBy) => {
+  let NEEDS_COMMON = null
+  if (sortBy === 'empatijos-bendruomene') {
+    NEEDS_COMMON = NEEDS_UNMET_ROL
+  }
+  else if (sortBy === 'empatijos-magija') {
+    NEEDS_COMMON = NEEDS_UNMET_IEVA
+  }
+  else if  (sortBy === 'cnvc') {
+    NEEDS_COMMON = NEEDS_UNMET_CNVC
+  }
+  else { //default value
+    NEEDS_COMMON = NEEDS_UNMET_ROL
+  }
+  return NEEDS_COMMON.map(renderItem)
+} 
 
 
   useEffect(() => {
@@ -62,7 +95,7 @@ export default function PoreikiaiPN() {
                   <AntDesign name="down" size={24} color="black" />
                 </View>
               </CollapseHeader>
-              <CollapseBody>{sortBy === 'empatijos-bendruomene' ? myConst.NEEDS_MET_ROL.map(renderItem) : myConst.NEEDS_MET_IEVA.map(renderItem)}</CollapseBody>
+              <CollapseBody>{  displayDataMet(sortBy) }</CollapseBody>
             </Collapse>
           </View>
 
@@ -81,7 +114,7 @@ export default function PoreikiaiPN() {
                   <AntDesign name="down" size={24} color="black" />
                 </View>
               </CollapseHeader>
-              <CollapseBody>{sortBy === 'empatijos-bendruomene' ? myConst.NEEDS_UNMET_ROL.map(renderItem) : myConst.NEEDS_UNMET_IEVA.map(renderItem)}</CollapseBody>
+              <CollapseBody>{  displayDataNotMet(sortBy) }</CollapseBody>
             </Collapse>
           </View>
         </View>

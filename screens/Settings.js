@@ -67,12 +67,16 @@ export default Settings = () => {
             }}
           >
             <Picker.Item
-              label="Empatijosbendruomene.lt"
+              label="Empatijos bendruomene"
               value="empatijos-bendruomene"
             />
             <Picker.Item 
-              label="Empatijosmagija" 
+              label="Empatijos magija" 
               value="empatijos-magija" 
+            />
+              <Picker.Item 
+              label="Center for Non Violent Communication " 
+              value="cnvc" 
             />
           </Picker>
           {__DEV__ ? <Text>sorting by: {sortBy}</Text>: null}

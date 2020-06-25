@@ -25,6 +25,16 @@ export default About = () => {
           >
             <Text>Empatijos magijai</Text>
           </TouchableOpacity>
+
+          <TouchableOpacity
+           style={{...globalStyles.card, ...styles.linkSpace}}
+            onPress={() =>
+              Linking.openURL("https://www.cnvc.org/")
+            }
+          >
+            <Text>cnvc.org</Text>
+          </TouchableOpacity>
+          
         </View>
       </View>
       <View style={globalStyles.card}>

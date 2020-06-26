@@ -60,7 +60,7 @@ export default function BendriPoreikiai() {
     let NEEDS_COMMON = null;
     {
       __DEV__
-        ? console.log("displayData function sortBy value: " + +sortBy)
+        ? console.log("displayData function sortBy value: "  + sortBy)
         : null;
     }
     if (sortBy === "empatijos-bendruomene") {

@@ -24,7 +24,7 @@ export default function HomeNavigator() {
       }}
       >
         <Stack.Screen name='Empatijos Atmintinė' component={Home} />
-        <Stack.Screen name='PoreikiaiPN'  component={PoreikiaiPN}  options={{ title: 'Poreikiai' }}/>
+        <Stack.Screen name='PoreikiaiPN'  component={PoreikiaiPN}  options={{ title: 'Jausmai' }}/>
         <Stack.Screen name='BendriPoreikiai'  component={BendriPoreikiai} options={{ title: 'Bendražmogiški Poreikiai' }} />
         <Stack.Screen name='Modelis'  component={Modelis} />
       </Stack.Navigator>

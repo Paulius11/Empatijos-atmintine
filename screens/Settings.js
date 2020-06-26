@@ -5,9 +5,7 @@ import { View, Switch, Text, StyleSheet, ToastAndroid } from "react-native";
 import { Picker } from "@react-native-community/picker";
 
 export default Settings = () => {
-  const [isEnabled, setIsEnabled] = useState(true);
   const [sortBy, setSortBy] = useState();
-  const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
 
   const storeData = async (value) => {
     try {
@@ -41,20 +39,6 @@ export default Settings = () => {
   return (
     <View style={{ ...globalStyles.container }}>
       
-{/*       
-      <View style={{ ...globalStyles.card }}>
-        <View style={{ ...styles.align, ...globalStyles.cardContent }}>
-          <Text style={{ ...globalStyles.titleText }}>Gera nuotaika</Text>
-          <Switch
-            trackColor={{ false: "#767577", true: "#81b0ff" }}
-            thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
-            ios_backgroundColor="#3e3e3e"
-            onValueChange={toggleSwitch}
-            value={isEnabled}
-          />
-        </View>
-      </View> */}
-
       <View style={{ ...globalStyles.card }}>
         <View style={{ ...globalStyles.cardContent }}>
           <Text style={{ ...globalStyles.titleText }}>Rūšiavimas pagal:</Text>

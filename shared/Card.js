@@ -27,8 +27,8 @@ const styles = StyleSheet.create({
   cardContent: {
     marginHorizontal: 18,
     marginVertical: 10,
-    flexDirection: 'row',
-    justifyContent: 'flex-start'
+    flexDirection: "row",
+    justifyContent: "flex-start",
   },
   title: {
     fontFamily: "nunito-regular",

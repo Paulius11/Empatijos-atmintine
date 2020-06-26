@@ -26,7 +26,6 @@ export default function aboutNavigator() {
           headerTitle: () => <Header title="Apie" />,
         })}
       />
-
     </Stack.Navigator>
   );
 }

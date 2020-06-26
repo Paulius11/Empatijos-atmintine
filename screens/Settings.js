@@ -20,16 +20,13 @@ export default Settings = () => {
       const value = await AsyncStorage.getItem("@ordering");
       if (value !== null) {
         setSortBy(value);
-
       } else {
-        setSortBy('empatijos-bendruomene'); //default value
+        setSortBy("empatijos-bendruomene"); //default value
       }
     } catch (e) {
-      console.log(e)
+      console.log(e);
     }
   };
-
-
 
   useEffect(() => {
     getData();
@@ -38,7 +35,6 @@ export default Settings = () => {
 
   return (
     <View style={{ ...globalStyles.container }}>
-      
       <View style={{ ...globalStyles.card }}>
         <View style={{ ...globalStyles.cardContent }}>
           <Text style={{ ...globalStyles.titleText }}>Rūšiavimas pagal:</Text>
@@ -54,16 +50,13 @@ export default Settings = () => {
               label="Empatijos bendruomene"
               value="empatijos-bendruomene"
             />
-            <Picker.Item 
-              label="Empatijos magija" 
-              value="empatijos-magija" 
-            />
-              <Picker.Item 
-              label="Center for Non Violent Communication " 
-              value="cnvc" 
+            <Picker.Item label="Empatijos magija" value="empatijos-magija" />
+            <Picker.Item
+              label="Center for Non Violent Communication "
+              value="cnvc"
             />
           </Picker>
-          {__DEV__ ? <Text>sorting by: {sortBy}</Text>: null}
+          {__DEV__ ? <Text>sorting by: {sortBy}</Text> : null}
         </View>
       </View>
     </View>

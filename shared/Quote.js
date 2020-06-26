@@ -122,7 +122,6 @@ const styles = StyleSheet.create({
     marginBottom: 24,
     shadowRadius: 3.84,
     elevation: 5,
-    
   },
 
   subCard: {
@@ -131,14 +130,11 @@ const styles = StyleSheet.create({
     borderColor: "black",
     borderStyle: "dashed",
     backgroundColor: "#99cbff",
-
-
   },
 
   mainText: {
     margin: 15,
     alignItems: "center",
-    
   },
   cardContent: {
     flexDirection: "row",

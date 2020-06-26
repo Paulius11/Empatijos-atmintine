@@ -1,7 +1,7 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import Header from "../shared/header";
-import Settings from '../screens/Settings';
+import Settings from "../screens/Settings";
 
 const Stack = createStackNavigator();
 
@@ -26,7 +26,6 @@ export default function settingsStack() {
           headerTitle: () => <Header title="Nustatymai" />,
         })}
       />
-
     </Stack.Navigator>
   );
 }

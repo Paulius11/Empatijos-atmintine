@@ -1,32 +1,38 @@
-import React from 'react'
-import { NavigationContainer } from '@react-navigation/native'
-import { createStackNavigator } from '@react-navigation/stack'
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 import Home from "../screens/Home";
 import JausmaiPN from "../screens/JausmaiPN";
-import BendriPoreikiai from '../screens/BendriPoreikiai'
-import Modelis from '../screens/Modelis'
+import BendriPoreikiai from "../screens/BendriPoreikiai";
+import Modelis from "../screens/Modelis";
 
-
-const Stack = createStackNavigator()
+const Stack = createStackNavigator();
 
 export default function HomeNavigator() {
   return (
     <>
       <Stack.Navigator
-      initialRouteName='Home'
-       screenOptions={{
-        headerStyle: {
-          backgroundColor:'#6099c5',
-        },
-        headerTintColor: '#fff',
-        headerTitleStyle: {
-        },
-      }}
+        initialRouteName="Home"
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: "#6099c5",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {},
+        }}
       >
-        <Stack.Screen name='Empatijos Atmintinė' component={Home} />
-        <Stack.Screen name='JausmaiPN'  component={JausmaiPN}  options={{ title: 'Jausmai' }}/>
-        <Stack.Screen name='BendriPoreikiai'  component={BendriPoreikiai} options={{ title: 'Bendražmogiški Poreikiai' }} />
-        <Stack.Screen name='Modelis'  component={Modelis} />
+        <Stack.Screen name="Empatijos Atmintinė" component={Home} />
+        <Stack.Screen
+          name="JausmaiPN"
+          component={JausmaiPN}
+          options={{ title: "Jausmai" }}
+        />
+        <Stack.Screen
+          name="BendriPoreikiai"
+          component={BendriPoreikiai}
+          options={{ title: "Bendražmogiški Poreikiai" }}
+        />
+        <Stack.Screen name="Modelis" component={Modelis} />
       </Stack.Navigator>
     </>
   );

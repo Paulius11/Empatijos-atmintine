@@ -7,10 +7,11 @@ import * as Linking from "expo-linking";
 export default About = () => {
   return (
     <View style={globalStyles.container}>
-      <View style={{...globalStyles.card}}>
-        <View style={{...globalStyles.cardContent, ...styles.align}}>
+      <View style={{ ...globalStyles.card }}>
+        <View style={{ ...globalStyles.cardContent, ...styles.align }}>
           <Text>Ačiū: </Text>
-          <TouchableOpacity  style={{...globalStyles.card , ...styles.linkSpace}}
+          <TouchableOpacity
+            style={{ ...globalStyles.card, ...styles.linkSpace }}
             onPress={() =>
               Linking.openURL("http://www.empatijosbendruomene.lt")
             }
@@ -18,7 +19,7 @@ export default About = () => {
             <Text>Empatijosbendruomene.lt</Text>
           </TouchableOpacity>
           <TouchableOpacity
-           style={{...globalStyles.card, ...styles.linkSpace}}
+            style={{ ...globalStyles.card, ...styles.linkSpace }}
             onPress={() =>
               Linking.openURL("https://www.facebook.com/empatijosmagija")
             }
@@ -27,18 +28,15 @@ export default About = () => {
           </TouchableOpacity>
 
           <TouchableOpacity
-           style={{...globalStyles.card, ...styles.linkSpace}}
-            onPress={() =>
-              Linking.openURL("https://www.cnvc.org/")
-            }
+            style={{ ...globalStyles.card, ...styles.linkSpace }}
+            onPress={() => Linking.openURL("https://www.cnvc.org/")}
           >
             <Text>cnvc.org</Text>
           </TouchableOpacity>
-          
         </View>
       </View>
       <View style={globalStyles.card}>
-      <View style={{...globalStyles.cardContent, ...styles.align}}>
+        <View style={{ ...globalStyles.cardContent, ...styles.align }}>
           <Text>Įvertinkite aplikaciją: </Text>
 
           <Foundation
@@ -68,12 +66,12 @@ const styles = StyleSheet.create({
     paddingTop: 300,
   },
   align: {
-    alignItems: 'center'
+    alignItems: "center",
   },
   linkSpace: {
-    padding: 15
+    padding: 15,
   },
   topSpace: {
-    paddingTop:10
-  }
+    paddingTop: 10,
+  },
 });

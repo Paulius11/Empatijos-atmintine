@@ -1,13 +1,12 @@
 import { StyleSheet } from "react-native";
-import Constants from 'expo-constants';
+import Constants from "expo-constants";
 
 export const globalStyles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingLeft: Constants.statusBarHeight/2,
-    paddingRight: Constants.statusBarHeight/2,
-    paddingTop: Constants.statusBarHeight/2,
-
+    paddingLeft: Constants.statusBarHeight / 2,
+    paddingRight: Constants.statusBarHeight / 2,
+    paddingTop: Constants.statusBarHeight / 2,
   },
   titleText: {
     fontFamily: "nunito-bold",
@@ -21,7 +20,6 @@ export const globalStyles = StyleSheet.create({
   button: {
     marginBottom: 20,
     borderRadius: 25,
-    
   },
   card: {
     borderRadius: 6,
@@ -39,7 +37,7 @@ export const globalStyles = StyleSheet.create({
     marginVertical: 10,
   },
   separatorBottom: {
-    borderBottomColor: 'black',
+    borderBottomColor: "black",
     borderBottomWidth: 0.2,
   },
   titleSubSub: {
@@ -48,7 +46,6 @@ export const globalStyles = StyleSheet.create({
     borderLeftWidth: 0,
     borderRightWidth: 0,
     borderTopWidth: 0,
-    fontFamily: 'nunito-regular'
+    fontFamily: "nunito-regular",
   },
-
 });

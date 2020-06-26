@@ -5,16 +5,20 @@ import {
   CollapseHeader,
   CollapseBody,
 } from "accordion-collapse-react-native";
-import {NEEDS_MET_IEVA, NEEDS_UNMET_IEVA, NEEDS_MET_ROL, NEEDS_UNMET_ROL, NEEDS_MET_CNVC, NEEDS_UNMET_CNVC}  from "../data";
+import {
+  NEEDS_MET_IEVA,
+  NEEDS_UNMET_IEVA,
+  NEEDS_MET_ROL,
+  NEEDS_UNMET_ROL,
+  NEEDS_MET_CNVC,
+  NEEDS_UNMET_CNVC,
+} from "../data";
 import { globalStyles } from "./styles";
 import { AntDesign } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-community/async-storage";
 
-
-
 export default function JausmaiPN() {
   const [sortBy, setSortBy] = useState();
-
 
   const getData = async () => {
     try {
@@ -22,64 +26,55 @@ export default function JausmaiPN() {
       if (value !== null) {
         setSortBy(value);
       } else {
-        setSortBy('empatijos-bendruomene'); //default value
+        setSortBy("empatijos-bendruomene"); //default value
       }
-
-
     } catch (e) {
-      console.log(e)
+      console.log(e);
     }
   };
 
   const displayDataMet = (sortBy) => {
-    let NEEDS_COMMON = null
-    if (sortBy === 'empatijos-bendruomene') {
-      NEEDS_COMMON = NEEDS_MET_ROL
+    let NEEDS_COMMON = null;
+    if (sortBy === "empatijos-bendruomene") {
+      NEEDS_COMMON = NEEDS_MET_ROL;
+    } else if (sortBy === "empatijos-magija") {
+      NEEDS_COMMON = NEEDS_MET_IEVA;
+    } else if (sortBy === "cnvc") {
+      NEEDS_COMMON = NEEDS_MET_CNVC;
+    } else {
+      //default value
+      NEEDS_COMMON = NEEDS_MET_ROL;
     }
-    else if (sortBy === 'empatijos-magija') {
-      NEEDS_COMMON = NEEDS_MET_IEVA
-    }
-    else if  (sortBy === 'cnvc') {
-      NEEDS_COMMON = NEEDS_MET_CNVC
-    }
-    else { //default value
-      NEEDS_COMMON = NEEDS_MET_ROL
-    }
-    return NEEDS_COMMON.map(renderItem)
-} 
+    return NEEDS_COMMON.map(renderItem);
+  };
 
-const displayDataNotMet = (sortBy) => {
-  let NEEDS_COMMON = null
-  if (sortBy === 'empatijos-bendruomene') {
-    NEEDS_COMMON = NEEDS_UNMET_ROL
-  }
-  else if (sortBy === 'empatijos-magija') {
-    NEEDS_COMMON = NEEDS_UNMET_IEVA
-  }
-  else if  (sortBy === 'cnvc') {
-    NEEDS_COMMON = NEEDS_UNMET_CNVC
-  }
-  else { //default value
-    NEEDS_COMMON = NEEDS_UNMET_ROL
-  }
-  return NEEDS_COMMON.map(renderItem)
-} 
-
+  const displayDataNotMet = (sortBy) => {
+    let NEEDS_COMMON = null;
+    if (sortBy === "empatijos-bendruomene") {
+      NEEDS_COMMON = NEEDS_UNMET_ROL;
+    } else if (sortBy === "empatijos-magija") {
+      NEEDS_COMMON = NEEDS_UNMET_IEVA;
+    } else if (sortBy === "cnvc") {
+      NEEDS_COMMON = NEEDS_UNMET_CNVC;
+    } else {
+      //default value
+      NEEDS_COMMON = NEEDS_UNMET_ROL;
+    }
+    return NEEDS_COMMON.map(renderItem);
+  };
 
   useEffect(() => {
     getData();
-    if(__DEV__){
-      console.log(sortBy)
+    if (__DEV__) {
+      console.log(sortBy);
     }
-
   }, [sortBy]);
-
 
   return (
     <View style={globalStyles.container}>
       <ScrollView>
         <View>
-        {__DEV__ ? <Text>sorting by: {sortBy}</Text>: null}
+          {__DEV__ ? <Text>sorting by: {sortBy}</Text> : null}
           <View style={globalStyles.card}>
             <Collapse>
               <CollapseHeader>
@@ -95,7 +90,7 @@ const displayDataNotMet = (sortBy) => {
                   <AntDesign name="down" size={24} color="black" />
                 </View>
               </CollapseHeader>
-              <CollapseBody>{  displayDataMet(sortBy) }</CollapseBody>
+              <CollapseBody>{displayDataMet(sortBy)}</CollapseBody>
             </Collapse>
           </View>
 
@@ -114,7 +109,7 @@ const displayDataNotMet = (sortBy) => {
                   <AntDesign name="down" size={24} color="black" />
                 </View>
               </CollapseHeader>
-              <CollapseBody>{  displayDataNotMet(sortBy) }</CollapseBody>
+              <CollapseBody>{displayDataNotMet(sortBy)}</CollapseBody>
             </Collapse>
           </View>
         </View>

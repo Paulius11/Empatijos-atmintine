@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { globalStyles } from "./styles";
 import AsyncStorage from "@react-native-community/async-storage";
-import { View, Switch, Text, StyleSheet, ToastAndroid } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import { Picker } from "@react-native-community/picker";
 
 export default Settings = () => {

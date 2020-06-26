@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { globalStyles } from "./styles";
-import { View, Button, TouchableOpacity } from "react-native";
+import { View, Button } from "react-native";
 import Quate from "../shared/Quote";
 
 export default function Home({ navigation }) {

@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, ImageBackground } from "react-native";
+import { StyleSheet, Text, View, ImageBackground } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Dimensions } from "react-native";
 import { useNavigation } from "@react-navigation/native";

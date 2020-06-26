@@ -2,7 +2,7 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import Home from "../screens/Home";
-import PoreikiaiPN from "../screens/PoreikiaiPN";
+import JausmaiPN from "../screens/JausmaiPN";
 import BendriPoreikiai from '../screens/BendriPoreikiai'
 import Modelis from '../screens/Modelis'
 
@@ -24,7 +24,7 @@ export default function HomeNavigator() {
       }}
       >
         <Stack.Screen name='Empatijos Atmintinė' component={Home} />
-        <Stack.Screen name='PoreikiaiPN'  component={PoreikiaiPN}  options={{ title: 'Jausmai' }}/>
+        <Stack.Screen name='JausmaiPN'  component={JausmaiPN}  options={{ title: 'Jausmai' }}/>
         <Stack.Screen name='BendriPoreikiai'  component={BendriPoreikiai} options={{ title: 'Bendražmogiški Poreikiai' }} />
         <Stack.Screen name='Modelis'  component={Modelis} />
       </Stack.Navigator>

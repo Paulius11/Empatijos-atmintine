@@ -19,7 +19,7 @@ export default function Home({ navigation }) {
         <Button
           title="Jausmai"
           color={COLOR}
-          onPress={() => pressHandler("PoreikiaiPN")}
+          onPress={() => pressHandler("JausmaiPN")}
         />
       </View>
       <View style={globalStyles.button}>

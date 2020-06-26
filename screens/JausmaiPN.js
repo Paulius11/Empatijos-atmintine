@@ -12,7 +12,7 @@ import AsyncStorage from "@react-native-community/async-storage";
 
 
 
-export default function PoreikiaiPN() {
+export default function JausmaiPN() {
   const [sortBy, setSortBy] = useState();
 
 

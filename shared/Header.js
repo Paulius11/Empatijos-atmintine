@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   headerText: {
-    fontWeight: "bold",
+    fontWeight: "normal",
     fontSize: 20,
     color: "#333",
     letterSpacing: 1,
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     position: "relative",
     marginLeft: 5,
     flexDirection: "column",
-    flex: 0.5,
+    flex: 0.45,
   },
   headerImage: {
     width: 26,

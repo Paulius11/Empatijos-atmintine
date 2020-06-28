@@ -85,7 +85,7 @@ export default function JausmaiPN() {
                   }
                 >
                   <Text style={globalStyles.titleText}>
-                    Patenkinti poreikiai
+                    Kai poreikiai patenkinti 
                   </Text>
                   <AntDesign name="down" size={24} color="black" />
                 </View>
@@ -104,7 +104,7 @@ export default function JausmaiPN() {
                   }
                 >
                   <Text style={globalStyles.titleText}>
-                    Nepatenkinti poreikiai
+                    Kai poreikiai nepatenkinti
                   </Text>
                   <AntDesign name="down" size={24} color="black" />
                 </View>

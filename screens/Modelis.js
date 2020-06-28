@@ -224,7 +224,6 @@ function Blocks() {
 
 export default function Modelis() {
   return (
-    <NavigationContainer independent={true}>
       <Tab.Navigator>
         <Tab.Screen
           name="NVCModel"
@@ -248,7 +247,6 @@ export default function Modelis() {
           }}
         />
       </Tab.Navigator>
-    </NavigationContainer>
   );
 }
 

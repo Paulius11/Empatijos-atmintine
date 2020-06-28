@@ -4,6 +4,7 @@ import Home from "../screens/Home";
 import JausmaiPN from "../screens/JausmaiPN";
 import BendriPoreikiai from "../screens/BendriPoreikiai";
 import Modelis from "../screens/Modelis";
+import Header from "../shared/Header";
 
 const Stack = createStackNavigator();
 
@@ -20,7 +21,11 @@ export default function HomeNavigator() {
           headerTitleStyle: {},
         }}
       >
-        <Stack.Screen name="Empatijos Atmintinė" component={Home} />
+        <Stack.Screen name="Empatijos Atmintinė" component={Home} 
+         options={() => ({
+          headerTitle: () => <Header title="Empatijos atmintinė" />,
+        })}
+      />
         <Stack.Screen
           name="JausmaiPN"
           component={JausmaiPN}

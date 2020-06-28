@@ -222,22 +222,6 @@ function Blocks() {
   );
 }
 
-function Log() {
-  return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Log!</Text>
-    </View>
-  );
-}
-
-function SettingsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Settings!</Text>
-    </View>
-  );
-}
-
 export default function Modelis() {
   return (
     <NavigationContainer independent={true}>

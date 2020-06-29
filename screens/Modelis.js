@@ -164,7 +164,7 @@ function Blocks() {
         onPress={() => {
           setModalOpen(true);
           setModalText(
-            "Kaltinimai, Įžeidinėjimai, Etikėčiu klijavimas, Kritika, Vertinimas."
+            "Kaltinimai, Įžeidinėjimai, Etikėčiu klijavimas, Kritika, Vertinimas, Apibendrinimai. \n\nAš esu ...\nTu esi ...\nVisa tai yra ..."
           );
         }}
       >
@@ -180,11 +180,11 @@ function Blocks() {
         onPress={() => {
           setModalOpen(true);
           setModalText(
-            "Mes kiekvienas esame atsakingi už savo mintis, jausmus ir veiksmus."
+            "Mes kiekvienas esame atsakingi už savo mintis, jausmus ir veiksmus.  \n\nTu verti mane jaustis ...\nAš padariau ... nes turėjau."
           );
         }}
       >
-        <Card title="Atsakomybės neprisiimimas">
+        <Card title="Atsakomybės neprisiėmimas">
           <Entypo name="users" size={24} color="black" />
         </Card>
       </TouchableOpacity>
@@ -193,7 +193,7 @@ function Blocks() {
         onPress={() => {
           setModalOpen(true);
           setModalText(
-            "Prielaida, kad tam tikri veiksmai nusipelno būti apdavanoti, o kiti nubausti."
+            "Prielaida, kad tam tikri veiksmai nusipelno būti apdavanoti, o kiti nubausti.   \n\nJie nusipelnė ..."
           );
         }}
       >
@@ -210,11 +210,11 @@ function Blocks() {
         onPress={() => {
           setModalOpen(true);
           setModalText(
-            "Prielaida, kad nėra kito pasirinkimo. Tokie žodžiai kaip: turi, privalai, būtina...."
+            "Prielaida, kad nėra kito pasirinkimo. \n\nAš privalau ...\nTu turi ... kitaip ... "
           );
         }}
       >
-        <Card title="Reikalavimai">
+        <Card title="Reikalavimas">
           <FontAwesome5 name="hand-point-right" size={24} color="black" />
         </Card>
       </TouchableOpacity>

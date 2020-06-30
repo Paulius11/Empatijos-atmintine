@@ -11,7 +11,6 @@ import { globalStyles } from "./styles";
 import Card from "../shared/Card";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-
 const Tab = createBottomTabNavigator();
 
 function NVCModel() {
@@ -218,35 +217,55 @@ function Blocks() {
           <FontAwesome5 name="hand-point-right" size={24} color="black" />
         </Card>
       </TouchableOpacity>
+
+      <View  style={globalStyles.container}>
+        <Text style={globalStyles.centerTitleText} >Kas nėra empatija</Text>
+
+        <Card title="Patarimas">
+          <FontAwesome5 name="comments" size={24} color="black" />
+        </Card>
+
+        <Card title="Paguoda">
+          <FontAwesome5 name="comments" size={24} color="black" />
+        </Card>
+
+        <Card title="Analizė">
+          <FontAwesome5 name="comments" size={24} color="black" />
+        </Card>
+
+        <Card title="Asmeninė patirtis">
+          <FontAwesome5 name="comments" size={24} color="black" />
+        </Card>
+      </View>
     </View>
   );
 }
 
 export default function Modelis() {
   return (
-      <Tab.Navigator>
-        <Tab.Screen
-          name="NVCModel"
-          component={NVCModel}
-          options={{
-            tabBarLabel: "NVC Modelis",
-            tabBarIcon: ({ color, size }) => (
-              <AntDesign name="smileo" size={size} color="green" />
-            ),
-          }}
-        />
+    <Tab.Navigator>
+      <Tab.Screen
+        name="NVCModel"
+        component={NVCModel}
+        options={{
+          tabBarLabel: "NVC Modelis",
+          tabBarIcon: ({ color, size }) => (
+            <AntDesign name="smileo" size={size} color="green" />
+          ),
+        }}
+      />
 
-        <Tab.Screen
-          name="Blocks"
-          component={Blocks}
-          options={{
-            tabBarLabel: "Blokai",
-            tabBarIcon: ({ color, size }) => (
-              <AntDesign name="frowno" size={size} color={color} />
-            ),
-          }}
-        />
-      </Tab.Navigator>
+      <Tab.Screen
+        name="Blocks"
+        component={Blocks}
+        options={{
+          tabBarLabel: "Blokai",
+          tabBarIcon: ({ color, size }) => (
+            <AntDesign name="frowno" size={size} color={color} />
+          ),
+        }}
+      />
+    </Tab.Navigator>
   );
 }
 

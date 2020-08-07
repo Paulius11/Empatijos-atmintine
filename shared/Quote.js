@@ -51,7 +51,7 @@ const basicAssumptions = [
   {
     assumption: "Per tarpusavio santykius žmonės tenkina poreikius.",
     description:
-      "Mes tenkiname daugybę mūsų poreikių per santykius su kitais žmonėmis ir su gamta, nors dalis poreikių iš esmės yra patenkinami per mūsų santykių su savimi, o kai kurie kiti per dvasinio gyvenimo aspektus. Kai kitų poreikiai nepatenkinami, dalis mūsų poreikių taip pat lieka nepatenkinti.",
+      "Mes tenkiname daugybę mūsų poreikių per santykius su kitais žmonėmis ir su gamta, nors dalis poreikių iš esmės yra patenkinami per mūsų santykį su savimi, o kai kurie kiti per dvasinio gyvenimo aspektus. Kai kitų poreikiai nepatenkinami, dalis mūsų poreikių taip pat lieka nepatenkinti.",
   },
   {
     assumption: "Mūsų pasaulyje yra pakankamai išteklių poreikių patenkinimui.",
